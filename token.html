@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token HTML</title>
+    <link rel="stylesheet" href="token.css">
+</head>
+<body>
+    window.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.stat-box');
+    
+        elements.forEach(function(element) {
+            const position = element.getBoundingClientRect();
+    
+            // checking whether fully visible
+            if(position.top >= 0 && position.bottom <= window.innerHeight) {
+                element.classList.add('fade-in');
+            }
+        });
+    });
+</body>
+</html>
